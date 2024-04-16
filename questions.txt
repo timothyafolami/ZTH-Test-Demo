@@ -1,0 +1,64 @@
+What is the average value of the third column?
+A. 1,500,000
+B. 1,600,000
+C. 1,700,000
+D. 1,800,000
+
+
+Which date has the highest value in the third column?
+A. 2010-05-02
+B. 2010-12-02
+C. 2010-02-19
+D. 2010-02-26
+
+
+What is the median value of the last column?
+A. 7.5
+B. 8.0
+C. 8.5
+D. 9.0
+
+
+How many unique values are there in the second column?
+A. 8
+B. 9
+C. 10
+D. 11
+
+
+What is the range (max - min) of the fifth column?
+A. 20
+B. 25
+C. 30
+D. 35
+
+
+Which date has the lowest value in the sixth column?
+A. 2010-05-03
+B. 2010-12-03
+C. 2010-03-19
+D. 2010-03-26
+Correct Answer: This will depend on the actual dataset.
+What is the standard deviation of the seventh column?
+A. 0.1
+B. 0.2
+C. 0.3
+D. 0.4
+Correct Answer: This will depend on the actual dataset.
+What is the correlation between the fourth and eighth columns?
+A. -0.5
+B. 0
+C. 0.5
+D. 1
+Correct Answer: This will depend on the actual dataset.
+What is the mode of the first column?
+A. 0
+B. 1
+C. 2
+D. 3
+Correct Answer: This will depend on the actual dataset.
+What is the skewness of the third column?
+A. -0.5
+B. 0
+C. 0.5
+D. 1

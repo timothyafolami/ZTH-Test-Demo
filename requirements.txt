@@ -1,0 +1,9 @@
+streamlit
+streamlit-authenticator==0.2.2
+notebook
+numpy
+matplotlib
+seaborn
+statsmodels
+pandas
+scikit-learn==0.24.2
