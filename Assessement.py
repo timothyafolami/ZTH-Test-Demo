@@ -81,12 +81,15 @@ def app():
     session_state = st.session_state
 
     st.title("Data Assessment Programme")
-
+    # getting the username from the file
+    with open('user.txt', 'r') as f:
+        user = f.read()
+        st.markdown(f'### Welcome *{user}* to Data Assessment Programme')
     # Introduction
     st.write("Welcome to the Data Assessment Programme. This program will test your knowledge in Excel, SQL, and Power BI")
 
     # Get user name
-    user_name = st.text_input("Enter your name")
+    user_name = user
 
     # Display Excel questions
     excel_answers = display_excel_questions(session_state)

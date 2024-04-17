@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 
-import Assessement, user_account
+import Assessement, Login_Page, Welcome_Page
 
 class MultiApp:
 
@@ -21,8 +21,8 @@ class MultiApp:
         # app = st.sidebar(
         with st.sidebar:        
             app = option_menu(
-                menu_title='ZTH Test Application ',
-                options=['user_account'],
+                menu_title='ZTH Test Application',
+                options=['Welcome Page', 'Login Page','Assessment'],
                 # icons=['house-fill','person-circle','trophy-fill','chat-fill','info-circle-fill'],
                 # menu_icon='chat-text-fill',
                 default_index=0,
@@ -35,9 +35,14 @@ class MultiApp:
                 )
 
         
-     
-        if app == 'user_account':
-            user_account.app()    
+
+        if app =='Welcome Page':
+            Welcome_Page.app()
+        if app == 'Login Page':
+            Login_Page.app()    
+        if app == "Assessment":
+            Assessement.app()
+        
              
 
        

@@ -7,9 +7,7 @@ from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
 from streamlit_authenticator.utilities.exceptions import (
                                                           LoginError,
-                                    ) 
-import Assessement
-
+                                    )
 
 
 def app():
@@ -42,9 +40,11 @@ def app():
     # logout button
         authenticator.logout("Logout", "sidebar")
 
-        st.write(f'Welcone *{st.session_state["name"]}* to Analysis Options')
+        st.markdown(f'### Welcone *{st.session_state["name"]}* to Analysis Options')
+        # writing user name in a file
+        with open('user.txt', 'w') as f:
+            f.write(st.session_state["name"])
 
-        Assessement.app()
 
-
-        
+if __name__ == "__main__":
+    app()
