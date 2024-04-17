@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-from streamlit_gsheets import GSheetsConnection
+from st_supabase_connection import SupabaseConnection
 
-# Create a connection object.
-conn = st.connection("gsheets", type=GSheetsConnection)
+# Initialize connection.
+conn = st.connection("supabase",type=SupabaseConnection)
 
 def display_excel_questions(session_state):
     if "excel_answers" not in session_state:
@@ -77,12 +77,10 @@ def display_power_bi_questions(session_state):
         session_state["power_bi_answers"][i-1] = st.text_area(f"Answer to Power BI Question {i}", session_state["power_bi_answers"][i-1], key=f"power_bi_{i}")
     return session_state["power_bi_answers"]
 
-def main():
+def app():
     session_state = st.session_state
 
     st.title("Data Assessment Programme")
-
-    mast_df = conn.read(spreadsheet=st.secrets['spreadsheet'])
 
     # Introduction
     st.write("Welcome to the Data Assessment Programme. This program will test your knowledge in Excel, SQL, and Power BI")
@@ -109,21 +107,20 @@ def main():
             if all(excel_answers) and all(sql_answers) and all(power_bi_answers):
                 # Combine answers into a dataframe
                 data = {
-                    "User Name": [user_name],
-                    **{f"Excel Question {i}": [answer] for i, answer in enumerate(excel_answers, 1)},
-                    **{f"SQL Question {i}": [answer] for i, answer in enumerate(sql_answers, 1)},
-                    **{f"Power BI Question {i}": [answer] for i, answer in enumerate(power_bi_answers, 1)}
+                    "user_name": user_name,
+                    **{f"excel_question_{i}": answer for i, answer in enumerate(excel_answers, 1)},
+                    **{f"sql_question_{i}": answer for i, answer in enumerate(sql_answers, 1)},
+                    **{f"power_bi_question_{i}": answer for i, answer in enumerate(power_bi_answers, 1)}
                 }
-                df = pd.DataFrame(data)
                 st.write("Thank you for submitting your answers!")
-                # Save the user responses to the master dataframe
-                # Append the data to a file, database, or Google Sheets
-                update_df = pd.concat([mast_df, df], ignore_index=True, axis=0)
+                # adding to database
+                # Insert the new row into the table.
+                conn.table("user_responses").insert(data).execute()
 
-                # Write the updated dataframe to Google Sheets
-                conn.write(spreadsheet=st.secrets['spreadsheet'], data=update_df, sheet_name="Sheet1")
+                # Print a success message.
+                st.success("Your answers are recorded successfully!")
             else:
                 st.error("Please answer all questions before submitting.")
 
 if __name__ == "__main__":
-    main()
+    app()

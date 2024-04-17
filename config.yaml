@@ -1,13 +1,215 @@
 credentials:
   usernames:
-    Timmy:
-      email: jsmith@gmail.com
-      name: John Smith
-      password: abc # To be replaced with hashed password
-    rbriggs:
-      email: rbriggs@gmail.com
-      name: Rebecca Briggs
-      password: def # To be replaced with hashed password
+    Promise:
+      email: promise_arowosafe@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Promise Arowosafe
+      password: Arowosafe
+    Elochukwu:
+      email: elochukwu_onyinye@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Elochukwu Onyinye
+      password: Onyinye
+    Ogechi:
+      email: ogechi_juliet@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Ogechi Juliet
+      password: Juliet
+    Salawu:
+      email: salawu_biliaminubiola@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Salawu Biliaminu Biola
+      password: Biliaminu Biola
+    Marie:
+      email: marie_laguerre@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Marie Laguerre
+      password: Laguerre
+    Muriel:
+      email: muriel_tema@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Muriel Tema
+      password: Tema
+    Praise:
+      email: praise_obuma@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Praise Obuma
+      password: Obuma
+    Ruth:
+      email: ruth_omoizirein@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Ruth Omoizirein
+      password: Omoizirein
+    Tunde:
+      email: tunde_ogunsakin@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Tunde Ogunsakin
+      password: Ogunsakin
+    Udi:
+      email: udi_blessing@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Udi Blessing
+      password: Blessing
+    Mohammed:
+      email: mohammed_sajid@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Mohammed Sajid
+      password: Sajid
+    Aleshinloye:
+      email: aleshinloye_wasilat@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Aleshinloye Wasilat
+      password: Wasilat
+    Godson:
+      email: godson_nwaubani@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Godson Nwaubani
+      password: Nwaubani
+    Kenne:
+      email: kenne_nzoyimmartinien@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Kenne Nzoyim Martinien
+      password: Nzoyim Martinien
+    Lucky:
+      email: lucky_okuna@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Lucky Okuna
+      password: Okuna
+    Linda:
+      email: linda_awotwe@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Linda Awotwe
+      password: Awotwe
+    Chinwe:
+      email: chinwe_ibemesi@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Chinwe Ibemesi
+      password: Ibemesi
+    Reecca:
+      email: reecca_ogu@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Reecca Ogu
+      password: Ogu
+    Emeti:
+      email: emeti_vicent@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Emeti Vicent
+      password: Vicent
+    Chidinma:
+      email: chidinma_umennadi@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Chidinma Umennadi
+      password: Umennadi
+    Ogbuade:
+      email: ogbuade_tijani@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Ogbuade Tijani
+      password: Tijani
+    Olabisi:
+      email: olabisi_oseni@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Olabisi Oseni
+      password: Oseni
+    Orji:
+      email: orji_patricia@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Orji Patricia
+      password: Patricia
+    Hassan:
+      email: hassan_nurudeen@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Hassan Nurudeen
+      password: Nurudeen
+    Aijoba:
+      email: aijoba_ruth@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Aijoba Ruth
+      password: Ruth
+    Hamiel:
+      email: hamiel_olamide@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Hamiel Olamide
+      password: Olamide
+    Ibukunoluwa:
+      email: ibukunoluwa_deji@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Ibukunoluwa Deji
+      password: Deji
+    Tobechukwu:
+      email: tobechukwu_romanus@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Tobechukwu Romanus
+      password: Romanus
+    Keren:
+      email: keren_happaneh@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Keren Happaneh
+      password: Happaneh
+    Adaeze:
+      email: adaeze_athanasius@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Adaeze Athanasius
+      password: Athanasius
+    Opene-Terry:
+      email: openeterry_josephine@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Opene-Terry Josephine
+      password: Josephine
+    Mazi:
+      email: mazi_charles@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Mazi Charles
+      password: Charles
+    Daniella:
+      email: daniella_gumba@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Daniella Gumba
+      password: Gumba
+    Jennifer:
+      email: jennifer_coffie@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Jennifer Coffie
+      password: Coffie
+    Olawuwo:
+      email: olawuwo_toheeb@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Olawuwo Toheeb
+      password: Toheeb
 cookie:
   expiry_days: 30
   key: random_signature_key # Must be string

@@ -5,12 +5,10 @@ import seaborn as sns
 import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
-from streamlit_authenticator.utilities.exceptions import (CredentialsError,
-                                                          ForgotError,
+from streamlit_authenticator.utilities.exceptions import (
                                                           LoginError,
-                                                          RegisterError,
-                                                          ResetError,
-                                                          UpdateError) 
+                                    ) 
+import Assessement
 
 
 
@@ -41,8 +39,12 @@ def app():
     elif st.session_state["authentication_status"] is None:
         st.warning('Please enter your username and password')
     elif st.session_state["authentication_status"] is True:
-
     # logout button
         authenticator.logout("Logout", "sidebar")
 
         st.write(f'Welcone *{st.session_state["name"]}* to Analysis Options')
+
+        Assessement.app()
+
+
+        
