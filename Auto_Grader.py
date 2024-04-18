@@ -41,7 +41,7 @@ def app():
             # use try and except to handle the case where the file is not found
             try:
                 st.write("Grading your assessment...")
-                grade_result = grade_assessment()
+                grade_result = grade_assessment() * 100
                 # a quick animation
                 st.balloons()
                 st.write("Grading completed!")
