@@ -5,6 +5,9 @@ from streamlit_option_menu import option_menu
 
 import Assessement, Login_Page, Welcome_Page, Auto_Grader
 
+st.set_page_config(page_title='ZTH Data Analysis Assessment', page_icon='🧊', layout='centered', initial_sidebar_state='auto')
+
+
 class MultiApp:
 
     def __init__(self):
@@ -18,6 +21,7 @@ class MultiApp:
         })
 
     def run():
+        # setting the title of the page
         # app = st.sidebar(
         with st.sidebar:        
             app = option_menu(

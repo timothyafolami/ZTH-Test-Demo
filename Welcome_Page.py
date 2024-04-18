@@ -5,7 +5,6 @@ import streamlit as st
 
 def app():
     st.title("Welcome to Zion Tech Hub!")
-    st.markdown("## A warm greeting to Zion Tech Hub.")
     st.markdown("## We are glad to have you onboard.")
     st.markdown("---")
     st.markdown("## About the Assessment:")
