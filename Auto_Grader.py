@@ -23,7 +23,7 @@ def grade_assessment():
     with open('user.txt', 'r') as f:
         user_name = f.read()
     # recording the username and grade in the database
-    conn.table("assessment_grades").insert({"user_name": user_name, "grade": user_grade}).execute()
+    conn.table("assessment_grades").insert({"user_name": user_name, "grade": user_grade*100}).execute()
 
     # returning the grade
     
