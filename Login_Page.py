@@ -40,7 +40,7 @@ def app():
     # logout button
         authenticator.logout("Logout", "sidebar")
 
-        st.markdown(f'### Welcone *{st.session_state["name"]}* to Analysis Options')
+        st.markdown(f'### Welcome *{st.session_state["name"]}* to Analysis Options')
         # writing user name in a file
         with open('user.txt', 'w') as f:
             f.write(st.session_state["name"])
