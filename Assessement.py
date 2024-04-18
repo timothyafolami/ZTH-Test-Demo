@@ -66,7 +66,7 @@ def display_power_bi_questions(session_state):
         "What is Power BI?",
         "Difference between Power Query and Power Pivot",
         "What is Power BI Desktop",
-        "What is Power Pivot?",
+        "What is data modeling in Power BI?",
         "What is Power Query?",
         "What is DAX?",
         "What are Filters in Power BI?",
@@ -82,9 +82,13 @@ def app():
 
     st.title("Data Assessment Programme")
     # getting the username from the file
-    with open('user.txt', 'r') as f:
-        user = f.read()
-        st.markdown(f'### Welcome *{user}* to Data Assessment Programme')
+    # using try and except to handle the case where the file is not found
+    try:
+        with open('user.txt', 'r') as f:
+            user = f.read()
+            st.markdown(f'### Welcome *{user}* to Data Assessment Programme')
+    except FileNotFoundError:
+        user = None
     # Introduction
     st.write("Welcome to the Data Assessment Programme. This program will test your knowledge in Excel, SQL, and Power BI")
 
@@ -115,6 +119,11 @@ def app():
                     **{f"sql_question_{i}": answer for i, answer in enumerate(sql_answers, 1)},
                     **{f"power_bi_question_{i}": answer for i, answer in enumerate(power_bi_answers, 1)}
                 }
+                # creating a dataframe to store the answers
+                df = pd.DataFrame(data, index=[0])
+                # saving the answers to a csv file
+                df.to_csv("user_responses.csv", index=False)
+
                 st.write("Thank you for submitting your answers!")
                 # adding to database
                 # Insert the new row into the table.

@@ -16,6 +16,9 @@ def app():
     st.markdown("## How to Proceed:")
     st.markdown("1. Go to the login page and log in to participate. Your first name is your username, and your last name is your password. Remember, the first letters are capitalized.")
     st.markdown("2. Once logged in, click on 'Assessment' to get started.")
+    st.markdown("3. Answer the questions in the assessment.")
+    st.markdown("4. Click on 'Submit Answers' to submit your responses.")
+    st.markdown("5. After submitting your answers, Go to the 'Autograder' page to check your grade.")
     st.markdown("---")
     st.markdown("## Best of Luck!")
 
