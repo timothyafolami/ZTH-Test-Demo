@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from st_supabase_connection import SupabaseConnection
 from utils import calculate_cosine_similarity
+import os
 
 
 # Initialize connection.
@@ -46,6 +47,12 @@ def app():
                 st.balloons()
                 st.write("Grading completed!")
                 st.markdown(f"### {grade_result}")
+                # Delete user.txt and user_responses.csv
+                try:
+                    os.remove("user.txt")
+                    os.remove("user_responses.csv")
+                except FileNotFoundError:
+                    pass
             except FileNotFoundError:
                 st.error("Please complete the assessment first.")
 
