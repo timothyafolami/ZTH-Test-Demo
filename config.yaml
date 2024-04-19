@@ -216,6 +216,12 @@ credentials:
       logged_in: False
       name: Olawuwo Toheeb
       password: Toheeb
+    Ololade:
+      email: olalade_olaniyan@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Ololade Olaniyan
+      password: Olaniyan
 cookie:
   expiry_days: 0
   key: random_signature_key # Must be string
