@@ -96,6 +96,12 @@ credentials:
       logged_in: False
       name: Linda Awotwe
       password: Awotwe
+    Promise_:
+      email: promise_ekele@example.com
+      failed_login_attempts: 0
+      logged_in: False
+      name: Promise Ekele
+      password: Ekele
     Chinwe:
       email: chinwe_ibemesi@example.com
       failed_login_attempts: 0
