@@ -26,8 +26,12 @@ def grade_assessment():
     # recording the username and grade in the database
     conn.table("assessment_grades").insert({"user_name": user_name, "grade": user_grade*100}).execute()
 
+    try:
+        os.remove("user.txt")
+        os.remove("user_responses.csv")
+    except FileNotFoundError:
+        pass
     # returning the grade
-    
     return user_grade
 
 def app():
@@ -48,11 +52,7 @@ def app():
                 st.write("Grading completed!")
                 st.markdown(f"### {grade_result}")
                 # Delete user.txt and user_responses.csv
-                try:
-                    os.remove("user.txt")
-                    os.remove("user_responses.csv")
-                except FileNotFoundError:
-                    pass
+                
             except FileNotFoundError:
                 st.error("Please complete the assessment first.")
 
