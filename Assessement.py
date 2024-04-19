@@ -83,17 +83,17 @@ def app():
     st.title("Data Assessment Programme")
     # getting the username from the file
     # using try and except to handle the case where the file is not found
-    try:
-        with open('user.txt', 'r') as f:
-            user = f.read()
-            st.markdown(f'### Welcome *{user}* to Data Assessment Programme')
-    except FileNotFoundError:
-        user = None
+    # try:
+    #     with open('user.txt', 'r') as f:
+    #         user = f.read()
+    #         st.markdown(f'### Welcome *{user}* to Data Assessment Programme')
+    # except FileNotFoundError:
+    #     user = None
     # Introduction
     st.write("Welcome to the Data Assessment Programme. This program will test your knowledge in Excel, SQL, and Power BI")
 
     # Get user name
-    user_name = user
+    user_name = st.text_input("Enter your full name:")
 
     # Display Excel questions
     excel_answers = display_excel_questions(session_state)

@@ -166,8 +166,8 @@ credentials:
       email: tobechukwu_romanus@example.com
       failed_login_attempts: 0
       logged_in: False
-      name: Tobechukwu Romanus
-      password: Romanus
+      name: Tobechukwu Onah
+      password: Onah
     Keren:
       email: keren_happaneh@example.com
       failed_login_attempts: 0

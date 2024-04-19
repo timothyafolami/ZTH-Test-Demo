@@ -10,7 +10,7 @@ conn = st.connection("supabase",type=SupabaseConnection)
 
 # This is an autograder page. 
 
-def grade_assessment():
+def grade_assessment(name: str):
     # getting the user data
     user_data = pd.read_csv("user_responses.csv")
 
@@ -20,17 +20,17 @@ def grade_assessment():
     # making inference with the grading function
     user_grade = calculate_cosine_similarity(generated_answer)
 
-    # getting the user name from the file
-    with open('user.txt', 'r') as f:
-        user_name = f.read()
+    # # getting the user name from the file
+    # with open('user.txt', 'r') as f:
+    #     user_name = f.read()
     # recording the username and grade in the database
-    conn.table("assessment_grades").insert({"user_name": user_name, "grade": user_grade*100}).execute()
+    conn.table("assessment_grades").insert({"user_name": name, "grade": user_grade*100}).execute()
 
-    try:
-        os.remove("user.txt")
-        os.remove("user_responses.csv")
-    except FileNotFoundError:
-        pass
+    # try:
+    #     os.remove("user.txt")
+    #     os.remove("user_responses.csv")
+    # except FileNotFoundError:
+    #     pass
     # returning the grade
     return user_grade
 
@@ -39,6 +39,9 @@ def app():
     st.markdown("#### Here your assessment is graded. No worries, just chill.")
     st.write("Click the button below to grade your assessment.")
 
+    # getting the user name with text input
+    user_name = st.text_input("Enter your full name:")
+
     # Button to trigger grading action
     if st.button("Grade"):
         # adding some animations
@@ -46,7 +49,7 @@ def app():
             # use try and except to handle the case where the file is not found
             try:
                 st.write("Grading your assessment...")
-                grade_result = grade_assessment() * 100
+                grade_result = grade_assessment(name=user_name) * 100
                 # a quick animation
                 st.balloons()
                 st.write("Grading completed!")
